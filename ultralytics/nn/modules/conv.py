@@ -71,7 +71,7 @@ class AttentionConv(nn.Module):
         # return self.act(self.bn(self.conv(x)))
         # return self.act(self.bn(torch.cat([self.conv(x), self.conv(x)], 1)))
         # return torch.cat([self, self], 1)
-        return self * self
+        return x * x
         # return self.act(self.bn(self.conv(x) * self.conv(x)))
 
     def forward_fuse(self, x):
