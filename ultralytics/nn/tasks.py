@@ -27,6 +27,10 @@ from ultralytics.nn.modules import (
     Concat,
     Conv,
     Conv2,
+
+    AttentionConv,
+    SpatialAttention,
+    
     ConvTranspose,
     Detect,
     DWConv,
