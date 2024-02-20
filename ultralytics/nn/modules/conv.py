@@ -70,7 +70,8 @@ class AttentionConv(nn.Module):
         """Apply convolution, batch normalization and activation to input tensor."""
         # return self.act(self.bn(self.conv(x)))
         # return self.act(self.bn(torch.cat([self.conv(x), self.conv(x)], 1)))
-        return torch.cat([self, self], 1)
+        # return torch.cat([self, self], 1)
+        return self * self
         # return self.act(self.bn(self.conv(x) * self.conv(x)))
 
     def forward_fuse(self, x):
